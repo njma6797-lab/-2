@@ -1,0 +1,50 @@
+body {
+  font-family: "Cairo", sans-serif;
+  background: linear-gradient(to bottom, #001f4d, #003366);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #00f;
+}
+
+input, button, textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+  background: linear-gradient(45deg,#00f,#0ff);
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s;
+}
+button:hover {
+  transform: scale(1.05);
+}
+
+textarea {
+  width: 90%;
+  height: 100px;
+}
+
+.preview img, .preview video {
+  max-width: 90%;
+  max-height: 300px;
+  margin-top: 10px;
+  border: 2px solid #00f;
+  border-radius: 10px;
+}
