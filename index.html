@@ -3,48 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>صانع التطبيقات – النجم</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/theme/dracula.min.css">
+<title>Media Uploader</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="lights-background"></div>
+  <div class="container">
+    <h1>Media Uploader</h1>
 
-<div class="container">
-  <h1 class="glow-text">صانع التطبيقات – النجم</h1>
+    <input type="file" id="fileInput" accept="image/*,video/*">
+    <button id="generateBtn">تحويل لكود</button>
 
-  <label class="label-text">HTML (إجباري)</label>
-  <textarea id="htmlCode"></textarea>
+    <div class="preview">
+      <h2>معاينة:</h2>
+      <img id="imgPreview" style="display:none;">
+      <video id="videoPreview" controls style="display:none;"></video>
+    </div>
 
-  <label class="label-text">CSS (اختياري)</label>
-  <textarea id="cssCode"></textarea>
-
-  <label class="label-text">JavaScript (اختياري)</label>
-  <textarea id="jsCode"></textarea>
-
-  <label class="label-text">JSON 1-5 (اختياري)</label>
-  <textarea id="json1"></textarea>
-  <textarea id="json2"></textarea>
-  <textarea id="json3"></textarea>
-  <textarea id="json4"></textarea>
-  <textarea id="json5"></textarea>
-
-  <div class="buttons">
-    <button id="previewBtn">معاينة الموقع</button>
-    <button id="createBtn">إنشاء الموقع</button>
-    <button id="installBtn">تثبيت التطبيق</button>
+    <div class="output">
+      <h2>الرابط المباشر / Base64:</h2>
+      <textarea id="outputCode" readonly></textarea>
+      <button id="copyBtn">نسخ</button>
+    </div>
   </div>
-</div>
 
-<audio id="meteorSound" src="https://www.soundjay.com/misc/sounds/meteor-1.mp3" preload="auto"></audio>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/htmlmixed/htmlmixed.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/javascript/javascript.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/css/css.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/xml/xml.min.js"></script>
-
-<script src="script.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
